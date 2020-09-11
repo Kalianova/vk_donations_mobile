@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:text="Целевой сбор"
             android:textAllCaps="false"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
