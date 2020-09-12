@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
@@ -13,6 +14,10 @@ import android.widget.Button;
 
 public class TypeOfSbor extends AppCompatActivity {
 
+
+
+
+
     Button button;
     Button button2;
 
@@ -20,6 +25,14 @@ public class TypeOfSbor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_type_of_sbor);
+
+        SQLiteDatabase myDB =
+                openOrCreateDatabase("my.db", MODE_PRIVATE, null);
+        myDB.execSQL(
+                "CREATE TABLE IF NOT EXISTS user (name VARCHAR(200), type INT, sum INT, goal VARCHAR(200), disk VARCHAR(200), " +
+                        "money VARCHAR(40), author VARCHAR(50))"
+        );
+
         setTitle("Оформление");
         ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegSbor"></activity>
+        <activity android:name=".PostSbor"></activity>
+        <activity android:name=".RegSbor" />
         <activity android:name=".dop" />
         <activity android:name=".CelSbor" />
         <activity android:name=".TypeOfSbor" />

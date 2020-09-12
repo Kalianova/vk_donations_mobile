@@ -4,7 +4,9 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -17,7 +19,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -31,16 +36,39 @@ public class CelSbor extends AppCompatActivity {
     Bitmap bitmap = null;
     Button button;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cel_sbor);
         setTitle("Целевой сбор");
 
+
+
         button = findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*TextView textView = findViewById(R.id.editTextTextPersonName);
+                TextView textView1 = findViewById(R.id.editTextNumberSigned);
+                TextView textView2 = findViewById(R.id.editTextTextPersonName2);
+                TextView textView3 = findViewById(R.id.editTextTextPersonName3);
+                Spinner spinner = findViewById(R.id.spinner2);
+                ContentValues row1 = new ContentValues();
+                row1.put("name", textView.getText().toString());
+                row1.put("type", 0);
+                row1.put("sum",Integer.parseInt(textView1.getText().toString()));
+                row1.put("goal",textView2.getText().toString());
+                row1.put("disk",textView3.getText().toString());
+                row1.put("money",spinner.getSelectedItem().toString());
+                row1.put("author","");
+
+                SQLiteDatabase myDB =
+                        openOrCreateDatabase("my.db", MODE_PRIVATE, null);
+
+                myDB.insert("user", null, row1);*/
                 startActivity(new Intent(CelSbor.this, dop.class));
             }
         });
